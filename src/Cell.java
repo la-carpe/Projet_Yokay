@@ -4,7 +4,7 @@ public class Cell {
         private boolean isEmpty;
         private Carte currentCarte;
         // Getters et Setters
-        public Carte getCurrentPiece() {
+        public Carte getCurrentCarte() {
             return currentCarte;
         }
         public boolean isEmpty() {

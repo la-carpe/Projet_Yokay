@@ -23,6 +23,9 @@ public class Plateau {
     private void initialiseBoard() {
         Position position;
         this.board = new Cell[16][16];
+
+        position = new Position('a',8);
+        this.board[7][0] = new Cell( position, new oni(position, 1) );
     }
 
     private boolean isCheckMate() {
@@ -41,7 +44,7 @@ public class Plateau {
                 }
                 StdDraw.filledSquare(col + 0.5, lig + 0.5, 0.5);
                 if ( ! this.board[lig][col].isEmpty()) {
-                    this.board[lig][col].getCurrentPiece().draw();
+                    this.board[lig][col].getCurrentCarte().draw();
                 }
             }
         }

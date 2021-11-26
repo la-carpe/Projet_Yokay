@@ -1,2 +1,19 @@
-public class oni {
-}
+
+    public class oni extends Carte {
+
+        public oni(Position position, int color) {
+            // Initialise les attributs et choisit la bonne image pour la pièce
+            super(position, color == 0 ? "Rb.png" : "Rb.png");
+        }
+
+        @Override
+        public boolean isValidMove(Position position, Cell[][] board) {
+            return true;
+        }
+
+        @Override
+        public String toString() {
+            return "K";
+        }
+    }
+
