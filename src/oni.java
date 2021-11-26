@@ -3,7 +3,7 @@
 
         public oni(Position position, int color) {
             // Initialise les attributs et choisit la bonne image pour la pièce
-            super(position, color == 0 ? "Rb.png" : "Rb.png");
+            super(position, color == 0 ? "img/Rb.png" : "img/Rb.png");
         }
 
         @Override

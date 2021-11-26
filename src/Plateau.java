@@ -22,10 +22,45 @@ public class Plateau {
 
     private void initialiseBoard() {
         Position position;
-        this.board = new Cell[16][16];
+        this.board = new Cell[12][12];
 
-        position = new Position('a',8);
-        this.board[7][0] = new Cell( position, new oni(position, 1) );
+        // Cases vides haut
+        for (int lig = 0; lig < 4; lig++) {
+            for (int col = 0; col < 12; col++) {
+                position = new Position((char) ('a' + col),2);
+                this.board[lig][col] = new Cell( null, null );
+            }
+        }
+        // Cases vides bas
+        for (int lig = 8; lig < 12; lig++) {
+            for (int col = 0; col < 12; col++) {
+                position = new Position((char) ('a' + col),2);
+                this.board[lig][col] = new Cell( null, null );
+            }
+        }
+        // Cases vides gauche
+        for (int col = 0; col < 4; col++) {
+            for (int lig = 0; lig < 12; lig++) {
+                position = new Position((char) ('a' + col),2);
+                this.board[lig][col] = new Cell( null, null );
+            }
+        }
+
+        // Cases vides droite
+        for (int col = 8; col < 12; col++) {
+            for (int lig = 0; lig < 12; lig++) {
+                position = new Position((char) ('a' + col),2);
+                this.board[lig][col] = new Cell( null, null );
+            }
+        }
+
+
+
+        // Initialise la fenêtre d'affichage de l'échiquier
+        StdDraw.setCanvasSize(800, 800);
+        StdDraw.setXscale(0, 12);
+        StdDraw.setYscale(0, 12);
+
     }
 
     private boolean isCheckMate() {
@@ -35,8 +70,8 @@ public class Plateau {
 
 
     private void printBoard() {
-        for (int lig = 0; lig < 16; lig++) {
-            for (int col = 0; col < 16; col++) {
+        for (int lig = 0; lig < 12; lig++) {
+            for (int col = 0; col < 12; col++) {
                 if ((lig + col) % 2 == 0) {
                     StdDraw.setPenColor(StdDraw.DARK_GRAY);
                 } else {
