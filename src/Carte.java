@@ -13,6 +13,6 @@ public abstract class Carte {
     public void draw() {
         double x = this.position.getX() + 0.5;
         double y = this.position.getY() + 0.5;
-       // StdDraw.picture(x, y, this.pictureFile, 1, 1);
+        StdDraw.picture(x, y, this.pictureFile, 1, 1);
     }
 }

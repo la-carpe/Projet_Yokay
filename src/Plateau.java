@@ -1,15 +1,20 @@
+
+
 public class Plateau {
 
     private Cell[][] board;
     private Player[] players;
     private Player currentPlayer;
+    private boolean change = true;
 
     // On decrit brievement la logique du jeu
     public void play() {
+        createPlayers();
+        initialiseBoard();
+        System.out.println("print");
         while (true) {
-            createPlayers();
-            initialiseBoard();
-            while (!isCheckMate()) {
+            while (change) {
+                change = false;
                 printBoard();
             }
         }
@@ -93,18 +98,23 @@ public class Plateau {
                 }
             }
         }
+        while (true) {
 
+            if (StdDraw.isMousePressed()) {
 
-        for (int lig = 0; lig < 1; lig++) {
-            for (int col = 0; col < 1; col++) {
-                StdDraw.setPenColor(StdDraw.RED);
+                for (int lig = 15; lig < 16; lig++) {
+                    for (int col = 3; col < 4; col++) {
+                        StdDraw.setPenColor(StdDraw.RED);
+                        StdDraw.filledSquare(0.5+ col, lig + 0.5, 0.5);
+                        System.out.println((StdDraw.mouseX() +"," + StdDraw.mouseY()));
 
+                    }
+                }
             }
         }
-        StdDraw.filledSquare( 1, + 1, 1);
-        if (!this.board[0][0].isEmpty()) {
-            this.board[0][0].getCurrentCarte().draw();
+
         }
 
+
     }
-}
+
