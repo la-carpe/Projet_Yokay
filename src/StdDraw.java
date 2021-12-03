@@ -1877,6 +1877,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      */
     @Override
     public void mouseClicked(MouseEvent e) {
+
         // this body is intentionally left empty
     }
 
