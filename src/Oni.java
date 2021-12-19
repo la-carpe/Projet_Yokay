@@ -1,9 +1,9 @@
 
-    public class oni extends Carte {
+    public class Oni extends Carte {
 
-        public oni(Position position, int color) {
+        public Oni(Position position, String pictureFile) {
             // Initialise les attributs et choisit la bonne image pour la pièce
-            super(position, color == 0 ? "img/dos_carte.png" : "img/dos_carte.png");
+            super(position,  pictureFile = "img/oni_carte.png");
         }
 
         @Override

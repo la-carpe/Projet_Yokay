@@ -1,8 +1,9 @@
 
 public class Cell {
-        private final Position position;
+
+    public final Position position;
         private boolean isEmpty;
-        private Carte currentCarte;
+        public Carte currentCarte;
         // Getters et Setters
         public Carte getCurrentCarte() {
             return currentCarte;
@@ -17,5 +18,7 @@ public class Cell {
             this.isEmpty = (currentCarte == null);
             this.currentCarte = currentCarte;
         }
+
+
     }
 
