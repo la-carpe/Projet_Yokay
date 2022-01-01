@@ -1,8 +1,8 @@
 public class Dos extends Carte {
 
-    public Dos(Position position, int color) {
+    public Dos(Position position,String pictureFile) {
         // Initialise les attributs et choisit la bonne image pour la pièce
-        super(position, color == 0 ? "img/dos_carte.png" : "img/dos_carte.png");
+        super(position, pictureFile =  "img/dos_carte.png");
     }
 
     @Override

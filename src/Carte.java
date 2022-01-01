@@ -1,12 +1,17 @@
 public abstract class Carte {
     // On note la visibilite des attributs definies a protected
-    protected Position position;;
+    protected Position position;
 
     protected Carte() {
     }
 
     public abstract String toString();
     public abstract boolean isValidMove(Position position, Cell[][] board);
+
+    public String getPictureFile() {
+        return pictureFile;
+    }
+
     // Constructeur initialisant les attributs
     public Carte(Position position, String pictureFile) {
         this.position = position;
@@ -20,3 +25,4 @@ public abstract class Carte {
         StdDraw.picture(x, y, this.pictureFile, 1, 1);
     }
 }
+

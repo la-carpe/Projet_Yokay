@@ -1,9 +1,9 @@
 
 public class Indice_bleu extends Carte {
 
-    public Indice_bleu(Position position, int color) {
+    public Indice_bleu(Position position, String pictureFile) {
         // Initialise les attributs et choisit la bonne image pour la pièce
-        super(position, color == 0 ? "img/indice_bleu.png" : "img/indice_bleu.png");
+        super(position, pictureFile = "img/indice_bleu.png");
     }
 
     @Override

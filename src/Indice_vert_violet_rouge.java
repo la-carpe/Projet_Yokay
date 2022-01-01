@@ -1,9 +1,9 @@
 
-public class Indice_rouge extends Carte {
+public class Indice_vert_violet_rouge extends Carte {
 
-    public Indice_rouge(Position position, String pictureFile) {
+    public Indice_vert_violet_rouge(Position position, String pictureFile) {
         // Initialise les attributs et choisit la bonne image pour la pièce
-        super(position, pictureFile ="img/indice_rouge.png");
+        super(position, pictureFile =  "img/indice_vert_violet_rouge.png");
     }
 
     @Override
