@@ -1871,12 +1871,13 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         }
     }
 
-
+    boolean termine = false;
     /**
      * This method cannot be called directly.
      */
     @Override
     public void mouseClicked(MouseEvent e) {
+
 
         // this body is intentionally left empty
     }
